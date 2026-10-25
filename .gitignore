@@ -10,5 +10,4 @@ __pycache__/
 *.RPP-bak
 *.rpp-bak
 *.reapeaks
-/Media/
 code/user_presets.json
