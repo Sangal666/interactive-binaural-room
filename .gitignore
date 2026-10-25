@@ -1,0 +1,14 @@
+.DS_Store
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+*.swp
+*.log
+*.RPP-bak
+*.rpp-bak
+*.reapeaks
+/Media/
+code/user_presets.json

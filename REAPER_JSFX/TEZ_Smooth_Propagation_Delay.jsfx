@@ -1,0 +1,40 @@
+desc:TEZ Smooth Propagation Delay
+
+slider1:0<0,100,0.001>Propagation Delay (ms)
+slider2:120<20,500,1>Smoothing Time (ms)
+
+@init
+buffer_size = 1048576;
+write_position = 0;
+current_delay_samples = slider1 * srate / 1000;
+
+@slider
+target_delay_samples = min(buffer_size - 2, max(0, slider1 * srate / 1000));
+smoothing_seconds = max(0.001, slider2 / 1000);
+delay_smoothing = exp(-1 / (smoothing_seconds * srate));
+
+@sample
+current_delay_samples = target_delay_samples
+  + delay_smoothing * (current_delay_samples - target_delay_samples);
+
+write_position[0] = spl0;
+(buffer_size + write_position)[0] = spl1;
+
+read_position = write_position - current_delay_samples;
+read_position < 0 ? read_position += buffer_size;
+
+read_index = floor(read_position);
+fraction = read_position - read_index;
+next_index = read_index + 1;
+next_index >= buffer_size ? next_index = 0;
+
+left_a = read_index[0];
+left_b = next_index[0];
+right_a = (buffer_size + read_index)[0];
+right_b = (buffer_size + next_index)[0];
+
+spl0 = left_a * (1 - fraction) + left_b * fraction;
+spl1 = right_a * (1 - fraction) + right_b * fraction;
+
+write_position += 1;
+write_position >= buffer_size ? write_position = 0;

@@ -1,0 +1,177 @@
+{
+  "osc": {
+    "host": "127.0.0.1",
+    "port": 8001,
+    "feedback_port": 9001,
+    "update_rate_hz": 20
+  },
+  "active_room_id": "room_a",
+  "active_speaker_count": 4,
+  "propagation": {
+    "reference_distance_m": 1.0,
+    "distance_rolloff": 1.0
+  },
+  "rooms": [
+    {
+      "id": "room_a",
+      "name": "Small Room / Close Range",
+      "width_m": 4.0,
+      "depth_m": 3.0,
+      "height_m": 2.5
+    },
+    {
+      "id": "room_b",
+      "name": "Medium Room",
+      "width_m": 8.0,
+      "depth_m": 6.0,
+      "height_m": 3.2
+    },
+    {
+      "id": "room_c",
+      "name": "Large Room / Long Range",
+      "width_m": 16.0,
+      "depth_m": 12.0,
+      "height_m": 5.0
+    }
+  ],
+  "speaker_presets": {
+    "1": [
+      {
+        "id": 1,
+        "name": "Source 1",
+        "x": 2.0,
+        "y": 0.6,
+        "z": 1.25,
+        "frequency_hz": 440
+      }
+    ],
+    "2": [
+      {
+        "id": 1,
+        "name": "Source 1",
+        "x": 1.2,
+        "y": 0.6,
+        "z": 1.25,
+        "frequency_hz": 440
+      },
+      {
+        "id": 2,
+        "name": "Source 2",
+        "x": 2.8,
+        "y": 0.6,
+        "z": 1.25,
+        "frequency_hz": 444
+      }
+    ],
+    "4": [
+      {
+        "id": 1,
+        "name": "Source 1",
+        "x": 0.8,
+        "y": 0.6,
+        "z": 1.25,
+        "frequency_hz": 440
+      },
+      {
+        "id": 2,
+        "name": "Source 2",
+        "x": 3.2,
+        "y": 0.6,
+        "z": 1.25,
+        "frequency_hz": 444
+      },
+      {
+        "id": 3,
+        "name": "Source 3",
+        "x": 0.8,
+        "y": 2.4,
+        "z": 1.25,
+        "frequency_hz": 448
+      },
+      {
+        "id": 4,
+        "name": "Source 4",
+        "x": 3.2,
+        "y": 2.4,
+        "z": 1.25,
+        "frequency_hz": 452
+      }
+    ],
+    "8": [
+      {
+        "id": 1,
+        "name": "Source 1",
+        "x": 2.0,
+        "y": 0.36,
+        "z": 1.25,
+        "frequency_hz": 440
+      },
+      {
+        "id": 2,
+        "name": "Source 2",
+        "x": 3.0748,
+        "y": 0.6939,
+        "z": 1.25,
+        "frequency_hz": 444
+      },
+      {
+        "id": 3,
+        "name": "Source 3",
+        "x": 3.52,
+        "y": 1.5,
+        "z": 1.25,
+        "frequency_hz": 448
+      },
+      {
+        "id": 4,
+        "name": "Source 4",
+        "x": 3.0748,
+        "y": 2.3061,
+        "z": 1.25,
+        "frequency_hz": 452
+      },
+      {
+        "id": 5,
+        "name": "Source 5",
+        "x": 2.0,
+        "y": 2.64,
+        "z": 1.25,
+        "frequency_hz": 456
+      },
+      {
+        "id": 6,
+        "name": "Source 6",
+        "x": 0.9252,
+        "y": 2.3061,
+        "z": 1.25,
+        "frequency_hz": 460
+      },
+      {
+        "id": 7,
+        "name": "Source 7",
+        "x": 0.48,
+        "y": 1.5,
+        "z": 1.25,
+        "frequency_hz": 464
+      },
+      {
+        "id": 8,
+        "name": "Source 8",
+        "x": 0.9252,
+        "y": 0.6939,
+        "z": 1.25,
+        "frequency_hz": 468
+      }
+    ]
+  },
+  "atmosphere": {
+    "temperature_c": 20.0,
+    "humidity_percent": 50.0
+  },
+  "listener": {
+    "x": 2.0,
+    "y": 1.5,
+    "z": 1.25,
+    "yaw_deg": 0.0
+  }
+}
